@@ -1,0 +1,662 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+    margin:0;
+    padding: 0;
+    background-size: cover; /* 画像をページ全体に広げる */
+    background-position: center center; /* 画像を中央に配置 */
+    background-repeat: no-repeat; /* 画像の繰り返しを無効にする */
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    background-image: url("/asset/pexels-henry-&-co-1939485.jpg");
+    min-height: 100vh; /* 追加: ビューポートの最小高さを100vhに設定 */
+
+  }
+header {
+    padding: 5px; /* 適切なパディングを設定 */
+    margin-top: 0;
+}
+
+.logo {
+    height: 50px; /* 適切な高さに調整 */
+}
+
+.small-text {
+    font-size: 20px; /* 小さい文字のフォントサイズ */
+}
+
+.large-text {
+    font-size: 30px; /* 大きい文字のフォントサイズ */
+}
+
+/* その他、スマートフォン向けのスタイルを追加 */ 
+
+.logo{
+    height: 70px;
+    margin:0;
+    border-radius: 100px; /* 角を丸める */
+
+}
+header {
+    display: flex;
+    text-align: left;
+    padding: 10px; /* 適切なパディングを設定 */
+    font-family: 'Hiragino Mincho Pro', 'Yu Mincho', 'Noto Sans JP', serif; /* 書道風のフォントファミリーを指定 */
+    font-size: 30px; /* 適切なサイズに調整 */
+    background-color:transparent;
+    background-size: cover; /* 背景画像をカバーするように調整 */
+    color: rgb(4, 4, 4); /* 文字色を白に設定 */
+    background-image: url("/asset/pexels-henry-&-co-1939485.jpg");
+}
+
+.header-left{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo{
+    margin-right: 10px;
+}
+
+    .small-text {
+        font-size: 30px; /* 小さい文字のフォントサイズ */
+        font-weight: bold;
+    }
+
+    .large-text {
+        font-size: 40px; /* 大きい文字のフォントサイズ */
+        font-weight: bold;
+    }
+
+
+    .hamburger-menu {
+        width: 50px;
+        height: 50px;
+        position: relative;
+        border: none;
+        background: transparent;
+        appearance: none;
+        padding: 0;
+        cursor: pointer;
+        margin-left: auto;
+      }
+      .hamburger-menu__bar {
+        display: inline-block;
+        width: 64%;
+        height: 4px;
+        background: #7b7878;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: .5s;
+      }
+      .hamburger-menu__bar:first-child {
+        top: 16px;
+      }
+      .hamburger-menu__bar:nth-child(2) {
+        top: 24px;
+      }
+      .hamburger-menu__bar:last-child {
+        top: 32px;
+      }
+      .hamburger-menu--open .hamburger-menu__bar {
+        top: 50%;
+      }
+      .hamburger-menu--open .hamburger-menu__bar:first-child {
+        transform: translateX(-50%) translateY(-50%) rotate(45deg);
+      }
+      .hamburger-menu--open .hamburger-menu__bar:last-child {
+        transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+      }
+      .hamburger-menu--open .hamburger-menu__bar:nth-child(2) {
+        display: none;
+      }
+      .navigation {
+        display: none;
+        background: #949393;
+        position: absolute;
+        top: 50px;
+        right: 0px;
+        width: 20%;
+        border-radius: 10px;
+        z-index: 9999;
+        font-size: 20px; /* フォントサイズを20pxに変更 */
+      }
+      .navigation__list {
+        text-align: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .navigation__list-item {
+        border-bottom: solid 1px #ccc6c6;
+      }
+      .navigation__list-item:first-child {
+        border-top: solid 1px #ccc6c6;
+      }
+      .navigation__link {
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+        display: block;
+        padding: 24px 0;
+        transition: .5s;
+      }
+      @media (hover: hover) and (pointer: fine) {
+        .navigation__link:hover {
+          background: #333;
+        }
+      }
+
+main {
+    background-size: cover;
+    background-color: #fef9f9cf;
+    text-align: center;
+    padding: 0px;
+    height: 50vh;
+    background-image: url("/asset/pexels-henry-&-co-1939485.jpg");
+    flex: 1; /* 残りの高さをいっぱいに占める */
+    flex-direction: column; /* 縦方向のコンテナとして使用 */
+    overflow: hidden;
+}
+
+.slideshow-container{
+  height: 70vh;
+  width: 100%;
+  margin: 0;
+}
+
+
+.main_visual {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  background-size: cover; /* 横幅と縦幅が親要素に収まるように調整 */
+  background-position: center; /* 画像を中央に寄せる */
+  background-repeat: no-repeat; /* 繰り返しを無効にする */
+  display: flex;
+  align-items: stretch;
+  padding: 0;
+  margin: 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* ボタンスタイル */
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  text-align: center;
+  margin-top: 0px;
+}
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: rgb(47, 10, 10);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.kakiage {
+  width: 100%;
+  flex-shrink: 0;
+  transition: transform 0.5s ease-in-out;
+  white-space: nowrap;
+  text-align: center;
+}
+.kakiage img {
+  width: 100%; /* 親要素に対する幅を100%にする */
+  height: 100%; /* 親要素に対する高さを100%にする */
+  object-fit: cover; /* アスペクト比を保ったまま親要素に収める */
+}
+
+
+/* 画面が小さい場合にスライドショーのサイズを調整 */
+@media screen and (max-width: 756px) {
+  .slideshow-container {
+    height: 40vh; /* 画面が小さい場合にスライドショーの高さを変更 */
+  }
+
+  .kakiage {
+    height: 100%; /* スライドショー内のテキストが画像の中に表示されるように調整 */
+  }
+
+  .kakiage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
+
+
+
+#soba {
+  font-size: 4vw; /* ビューポートの幅に対する相対単位でフォントサイズを設定 */
+  font-weight: 400;
+  font-family: 'Yu Mincho', 'Yu Gothic', 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-serif;
+  color: #fff;
+  display: inline-block;
+  position: absolute;
+  top: 0; /* 画面上部に対するパーセンテージで位置を調整 */
+  right: 0; /* 画面右部に対するパーセンテージで位置を調整 */
+  text-align: start;
+  line-height: 1;
+  margin: 0;
+  padding: 1%; /* ビューポートの幅に対する相対単位でパディングを設定 */
+}
+
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+}
+
+.news-container {
+  margin-bottom: 60px; /* footerの高さと同じかそれ以上の値に設定 */
+}
+
+.news {
+  font-size: 20px;
+  font-weight: 300;
+  font-family: 'Yu Mincho', 'Yu Gothic', 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-serif;
+  border: 1px solid #837f7f;
+  padding: 10px;
+  margin: 1px 0 0;
+  background-color: #fff;
+  text-align: center;
+  height: 30px;
+  flex: 1;
+}
+
+
+#rights {
+    font-family: 'Yu Mincho', 'Yu Gothic', 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-serif; /* 和風のフォント指定 */
+    font-size: 20px; /* フォントサイズを40pxに設定 */
+    color: #f6f2f2; /* 文字色を白に設定 */
+}
+
+#footer {
+  font-family: 'Yu Mincho', 'Yu Gothic', 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-serif; /* 和風のフォント指定 */
+  font-size: 20px; /* フォントサイズを40pxに設定 */
+  color: #f6f2f2; /* 文字色を白に設定 */
+}
+
+.menu {
+  padding: 0px;
+  display: flex;
+  align-items: center; /* 縦方向に中央に配置 */
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.menu_text {
+  font-family: 'Yu Mincho', 'Yu Gothic', 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-serif;
+  font-size: 30px;
+  flex: 1;
+  text-align: right;
+  right: 0px;
+}
+
+.menu-item1 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center; /* a タグ内の要素を中央に配置 */
+  /*border-radius: 10px;*/
+  text-align: center;
+  justify-content: center;
+  overflow: hidden;
+  flex: 1;
+  position: relative; /* 追加 */
+   transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out; /* ホバー時のトランジションを設定 */
+}
+
+.menu-item1:hover {
+    transform: scale(1.05); /* ホバー時に拡大 */
+    filter: brightness(1.2); /* ホバー時にブライトニング効果を適用 */
+}
+
+
+
+
+.menu-item1 img {
+  max-width: 100%; /* 親要素に対する最大幅を100%にする */
+  max-height: 100%; /* 親要素に対する最大高さを100%にする */
+  border-radius: 0px;
+  object-fit: cover;
+}
+
+.detail-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(165, 162, 162, 0.8); /* 背景色を指定 */
+  padding: 10px; /* 適切なパディングを指定 */
+  border-radius: 5px;
+  font-size: 25px;
+  font-family: 'Yu Mincho', 'Yu Gothic', 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-serif; /* 和風のフォント指定 */
+  color: #050505;
+}
+
+/*営業時間*/
+/*営業時間*/
+.opening_hour {
+  padding: 0px;
+  display: flex;
+  align-items: center; /* 縦方向に中央に配置 */
+  justify-content: center;
+  margin-top: 0; 
+  margin-bottom: 0; 
+  flex: 1;
+}
+
+.opening_hourtext {
+  font-family: 'Yu Mincho', 'Yu Gothic', 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-serif;
+  font-size: 30px;
+  flex: 1;
+  text-align: center;
+  position: relative;
+  margin-top: 0px;
+}
+
+
+/* スマートフォン向けのスタイル */
+@media screen and (max-width: 768px) {
+  .opening_hour {
+    flex-direction: column-reverse; /* 縦に並び、"opening_hourtext" を上に配置 */
+    align-items: center; /* 中央に配置 */
+  }
+
+  .opening_hourtext {
+    margin-top: 20px; /* 適切なマージンを追加（必要に応じて調整） */
+  }
+}
+
+
+.menu-item2 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center; /* a タグ内の要素を中央に配置 */
+  /*border-radius: 10px;*/
+  text-align: center;
+  justify-content: center;
+  overflow: hidden;
+  flex: 1;
+  position: relative; /* 追加 */
+
+}
+
+.menu-item2 img {
+  max-width: 100%; /* 親要素に対する最大幅を100%にする */
+  max-height: 100%; /* 親要素に対する最大高さを100%にする */
+  border-radius: 0px;
+  object-fit: cover;
+}
+
+.map {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 1;
+
+}
+
+.maptext {
+  font-family: 'Yu Mincho', 'Yu Gothic', 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-serif;
+  font-size: 30px;
+  flex: 1;
+  text-align: center;
+  position: relative;
+  margin-top: 0px;
+}
+
+.menu-item3 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center; /* a タグ内の要素を中央に配置 */
+  /*border-radius: 10px;*/
+  text-align: center;
+  justify-content: center;
+  overflow: hidden;
+  flex: 1;
+  position: relative; /* 追加 */
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out; /* ホバー時のトランジションを設定 */
+}
+
+.menu-item3:hover {
+  transform: scale(1.05); /* ホバー時に拡大 */
+  filter: brightness(1.2); /* ホバー時にブライトニング効果を適用 */
+}
+
+/* メディアクエリ: 768px以下の画面幅に対するスタイル */
+@media (max-width: 768px) {
+  .menu,.opening_hour {
+    flex-direction: column; /* 縦に並ぶように変更 */
+    height: auto; /* 高さを自動に変更 */
+  }
+
+  .menu_text,
+  .menu-item1,
+  .menu-item2 {
+    width: 100%; /* 幅を100%に変更 */
+  }
+}
+
+
+.menu-text1 {
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  width: 100%;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 1s ease;
+  padding: 10px; /* 余白を追加 */
+}
+
+
+ .menu_sec_2 h2 {
+        font-size: 20px;
+        line-height: 1.5;
+        color: #070707;
+        font-family: 'Yu Mincho', 'Yu Gothic', 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-serif;
+        margin-left: 10px;
+        margin-right: 10px;
+        height: auto;
+        margin-bottom: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .yoyaku{
+      width: 100%;
+      position: relative;
+    }
+    
+    .yoyaku-background {
+      position: relative;
+      width: 100%;
+      height: 60vh;
+      background-image:url("/asset/tennnai.jpg");
+      background-size: 100% 100%; /* 画像を要素全体に広げる */ 
+      display: flex;
+      padding: 0px;
+      margin: 0;
+      transition: transform 0.3s ease-in-out; /* ホバー時のトランジションを設定 */
+  }
+
+  .yoyaku-background:hover {
+    transform: scale(1.05); /* ホバー時に拡大 */
+    filter: brightness(1.2); /* ホバー時にブライトニング効果を適用 */
+}
+
+      .yoyaku-text{
+        position: absolute;
+        top: 50%; /* 上端を中央に合わせる */
+        left: 50%; /* 左端を中央に合わせる */
+        transform: translate(-50%, -50%); /* 中央に寄せる */
+        font-size: 40px;
+        font-weight: 400;
+        font-family: 'Yu Mincho', 'Yu Gothic', 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-serif; /* 和風のフォント指定 */
+        color: #fff;
+        background-color: rgba(165, 162, 162, 0.8); /* 明るいグレーの背景色 */
+        border-radius: 10px;
+}
+
+
+.yoyaku-background a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 756px) {
+  .yoyaku-background {
+    height: 50vh; /* 画面が小さい場合にyoyakuの背景の高さを変更 */
+  }
+}
+
+
+/*=== 9-1-4 矢印が動いてスクロールを促す  ====*/
+
+/*スクロールダウン全体の場所*/
+.scrolldown4{
+  /*描画位置※位置は適宜調整してください*/
+position:absolute;
+top:50%;
+right:50%;
+transform: translate(50%, -50%); /* 上端と右端が中央にくるように調整 */
+z-index: 1000;
+  /*矢印の動き1秒かけて永遠にループ*/
+animation: arrowmove 1s ease-in-out infinite;
+}
+
+/*下からの距離が変化して全体が下→上→下に動く*/
+@keyframes arrowmove{
+  0% { top: 51%; } /* 上端を下げて中央に */
+  50% { top: 53%; } /* 上端を上げて中央に */
+  100% { top: 51%; } /* 上端を下げて中央に */
+}
+
+/*Scrollテキストの描写*/
+.scrolldown4 span{
+  /*描画位置*/
+position: absolute;
+left:-40px;
+bottom:10px;
+  /*テキストの形状*/
+color: #ffffff;
+font-size: 2rem;
+letter-spacing: 0.05em;
+/*縦書き設定*/
+-ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+}
+
+/* 矢印の描写 */
+.scrolldown4:before {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  bottom: 0;
+  right: -6px;
+  /*矢印の形状*/
+  width: 2px;
+  height: 20px;
+  background: #ffffff;
+  transform: skewX(-31deg);
+}
+
+.scrolldown4:after{
+content:"";
+  /*描画位置*/
+position: absolute;
+bottom:0;
+right:0;
+  /*矢印の形状*/
+width:2px;
+height: 50px;
+background:#ffffff;
+}
+
+.news-container {
+  border: 1px solid #ccc; /* 薄い線で囲みを追加 */
+  margin: 20px; /* 適切なマージンを設定 */
+  padding: 10px; /* 適切なパディングを設定 */
+}
+.news {
+  font-size: 20px;
+  font-weight: 300; 
+  font-family: 'Yu Mincho', 'Yu Gothic', 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-serif;
+  border: 1px solid #837f7f; /* ボーダーのスタイルと色を指定 */
+  padding: 10px; /* 適切なパディングを設定 */
+  margin: 1px 0 0; /* 適切なマージンを設定 */
+  background-color: #fff;
+  text-align: center;
+  height: 30px;
+
+}
+
+.news h2 {
+    color: #333; /* ニュースセクションの見出しの色を指定 */
+    font-size: 30px;
+    border-bottom: 1px solid #050505; /* アンダーバーのスタイルと色を指定 */
+    padding-bottom: 2px; /* パディングを追加してアンダーバーと文字の間隔を調整 */
+}
+
+.news ul {
+    list-style-type: none; /* リストのマーカーをなくす */
+    padding: 0; /* リストのパディングをなくす */
+    overflow-y: scroll; /* 垂直方向のスクロールバーを表示 */
+    max-height: 300px; /* スクロールバーの最大の高さを設定（必要に応じて調整） */
+    border: #7b7878;
+}
+
+.news li {
+    margin-bottom: 10px; /* 各ニュースアイテムのマージンを設定 */
+}
+
+.news a {
+
+    color: #050505; /* リンクの色を指定 */
+    text-decoration: none; /* 下線をなくす */
+}
+
+.news a:hover {
+    text-decoration: underline; /* ホバー時に下線を表示 */
+}
+
+
+
+  

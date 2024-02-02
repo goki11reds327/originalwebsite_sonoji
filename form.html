@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sonoji_reservation</title>
+    <link rel="stylesheet" href="/asset/CSS/form.css">
+    <link rel="stylesheet" href="/asset/CSS/reset.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+</head>
+<body>
+
+  <header>
+    <div class="header-left">
+        <a href="http://127.0.0.1:5501/index.html#" id="topLink"></a>
+         <img class="logo" src="/asset/logo_sonoji.jpg" alt="logo">
+         <div class="small-text">蕎麦</div>
+         <div class="large-text">その字 </div> 
+    </div>
+
+<button class="hamburger-menu" id="js-hamburger-menu">
+    <span class="hamburger-menu__bar"></span>
+    <span class="hamburger-menu__bar"></span>
+    <span class="hamburger-menu__bar"></span>
+  </button>
+  <nav class="navigation">
+    <ul class="navigation__list">
+     <li class="navigation__list-item"><a href="http://127.0.0.1:5501/index.html#" class="navigation__link">トップ</a></li>
+      <li class="navigation__list-item"><a href="http://127.0.0.1:5501/menu.html" class="navigation__link">メニュー</a></li>
+      <li class="navigation__list-item"><a href="http://127.0.0.1:5501/form.html" class="navigation__link">予約</a></li>
+    </ul>
+  </nav>
+</header>
+  <form id="contact">
+    <div class="container">
+      <div class="head">
+        <h2>ご予約フォーム</h2>
+      </div>
+      <input type="text" name="name" placeholder="お名前" /><br />
+      <input  type="email" name="email" placeholder="Email" /><br />
+      <input  type="number" name="number" placeholder="お人数" /><br />
+      <textarea type="text" name="message" placeholder="その他"></textarea><br />
+      <div class="message">Message Sent</div>
+      <button id="submit" type="submit">
+        送信
+      </button>
+    </div>
+  </form>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="/asset/CSS/menuscript.js"></script>
+    <script src="https://unpkg.com/web-animations-js@2.3.2/web-animations.min.js"></script>
+    <script src="https://unpkg.com/muuri@0.8.0/dist/muuri.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+body {
+    background-color:#f2f2f2;
+    margin:0px;
+    background-image: url("/asset/pexels-fwstudio-129733.jpg");
+    
+  }
+
+header {
+    padding: 0px; /* 適切なパディングを設定 */
+    margin: 0px;
+}
+
+.logo {
+    height: 50px; /* 適切な高さに調整 */
+}
+
+.small-text {
+    font-size: 20px; /* 小さい文字のフォントサイズ */
+}
+
+.large-text {
+    font-size: 30px; /* 大きい文字のフォントサイズ */
+}
+
+/* その他、スマートフォン向けのスタイルを追加 */ 
+
+.logo{
+    height: 70px;
+    margin:0;
+    border-radius: 100px; /* 角を丸める */
+
+}
+header {
+    display: flex;
+    text-align: left;
+    padding: 10px; /* 適切なパディングを設定 */
+    font-family: 'Hiragino Mincho Pro', 'Yu Mincho', 'Noto Sans JP', serif; /* 書道風のフォントファミリーを指定 */
+    font-size: 30px; /* 適切なサイズに調整 */
+    background-color:transparent;
+    background-size: cover; /* 背景画像をカバーするように調整 */
+    color: rgb(4, 4, 4); /* 文字色を白に設定 */
+    background-image: url("/asset/pexels-henry-&-co-1939485.jpg");
+}
+
+.header-left{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    margin-right: 10px;
+}
+
+    .small-text {
+        font-size: 30px; /* 小さい文字のフォントサイズ */
+        font-weight: bold;
+    }
+
+    .large-text {
+        font-size: 40px; /* 大きい文字のフォントサイズ */
+        font-weight: bold;
+    }
+
+
+    .hamburger-menu {
+        width: 50px;
+        height: 50px;
+        position: relative;
+        border: none;
+        background: transparent;
+        appearance: none;
+        padding: 0;
+        cursor: pointer;
+        margin-left: auto;
+      }
+      .hamburger-menu__bar {
+        display: inline-block;
+        width: 64%;
+        height: 4px;
+        background: #7b7878;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: .5s;
+      }
+      .hamburger-menu__bar:first-child {
+        top: 16px;
+      }
+      .hamburger-menu__bar:nth-child(2) {
+        top: 24px;
+      }
+      .hamburger-menu__bar:last-child {
+        top: 32px;
+      }
+      .hamburger-menu--open .hamburger-menu__bar {
+        top: 50%;
+      }
+      .hamburger-menu--open .hamburger-menu__bar:first-child {
+        transform: translateX(-50%) translateY(-50%) rotate(45deg);
+      }
+      .hamburger-menu--open .hamburger-menu__bar:last-child {
+        transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+      }
+      .hamburger-menu--open .hamburger-menu__bar:nth-child(2) {
+        display: none;
+      }
+      .navigation {
+        display: none;
+        background: #949393;
+        position: absolute;
+        top: 50px;
+        right: 0px;
+        width: 20%;
+        border-radius: 10px;
+        z-index: 9999;
+        font-size: 20px; /* フォントサイズを20pxに変更 */
+      }
+      .navigation__list {
+        text-align: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .navigation__list-item {
+        border-bottom: solid 1px #ccc6c6;
+      }
+      .navigation__list-item:first-child {
+        border-top: solid 1px #ccc6c6;
+      }
+      .navigation__link {
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+        display: block;
+        padding: 24px 0;
+        transition: .5s;
+      }
+      @media (hover: hover) and (pointer: fine) {
+        .navigation__link:hover {
+          background: #333;
+        }
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 20px auto;
+        text-align: center;
+        border-radius: 10px;
+        background-color: #dcdcdc; /* フォームの背景色をグレーに設定 */
+        padding: 20px;
+        font-size: 25px;
+        font-family: 'Hiragino Mincho Pro', 'Yu Mincho', 'Noto Sans JP', serif; /* 書道風のフォントファミリーを指定 */
+
+    }
+    
+    .head {
+        border-radius: 10px 10px 0 0;
+        background-color: #808080; /* フォームヘッダーの背景色をダークグレーに設定 */
+        color: #fff; /* フォームヘッダーテキストの色を白に設定 */
+        padding: 15px;
+        
+    }
+    
+    h2 {
+        font-size: 2em;
+        font-family: 'Hiragino Mincho Pro', 'Yu Mincho', 'Noto Sans JP', serif; /* 書道風のフォントファミリーを指定 */
+
+        
+    }
+    
+    input, textarea {
+        font-size: 1em;
+        padding: 15px 10px;
+        font-family: 'Arial', sans-serif;
+        border: 1px solid #ccc; /* 枠線の色を灰色に設定 */
+        background: #f5f5f5; /* 入力フィールドの背景色を淡いグレーに設定 */
+        color: #333; /* テキストの色を黒に設定 */
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        -moz-background-clip: padding;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 80%;
+        max-width: 100%;
+        margin-bottom: 15px;
+        font-family: 'Hiragino Mincho Pro', 'Yu Mincho', 'Noto Sans JP', serif; /* 書道風のフォントファミリーを指定 */
+
+    }
+    
+    textarea {
+        height: 100px;
+        
+    }
+    
+    button {
+        margin-top: 15px;
+        margin-bottom: 25px;
+        background-color: #333; /* 送信ボタンの背景色をダークグレーに設定 */
+        padding: 12px 45px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        border-radius: 5px;
+        border: 1px solid #333; /* 枠線の色をダークグレーに設定 */
+        -webkit-transition: .5s;
+        transition: .5s;
+        display: inline-block;
+        cursor: pointer;
+        width: 80%;
+        max-width: 100%;
+        color: #fff; /* テキストの色を白に設定 */
+        font-family: 'Arial', sans-serif;
+        font-family: 'Hiragino Mincho Pro', 'Yu Mincho', 'Noto Sans JP', serif; /* 書道風のフォントファミリーを指定 */
+        font-size: 20px;
+
+    }
+    
+    button:hover {
+        background: #555; /* ホバー時の背景色を濃いダークグレーに設定 */
+    }
+    
+  
+  label.error {
+      font-family:'Source Sans Pro',arial,sans-serif;
+      font-size:1em;
+      display:block;
+      padding-top:10px;
+      padding-bottom:10px;
+      background-color:#d89c9c;
+      width: 80%;
+      margin:auto;
+      color: #FAFAFA;
+      -webkit-border-radius:6px;
+      -moz-border-radius:6px;
+      border-radius:6px;
+  }
+  /* media queries */
+  @media (max-width: 700px) {
+    label.error {
+      width: 90%;
+    }
+    input, textarea {
+      width: 90%;
+    }
+    button {
+      width:90%;
+    }
+    body {
+    padding-top:10px;
+    }  
+  }
+  .message {
+      font-family:'Source Sans Pro',arial,sans-serif;
+      font-size:1.1em;
+      display:none;
+      padding-top:10px;
+      padding-bottom:10px;
+      background-color:#2ABCA7;
+      width: 80%;
+      margin:auto;
+      color: #FAFAFA;
+      -webkit-border-radius:6px;
+      -moz-border-radius:6px;
+      border-radius:6px;
+  }
